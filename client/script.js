@@ -4,6 +4,10 @@ import user from './assets/user.svg'
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
 
+const {SERVER_ADDR} = process.env;
+
+const SERVER_URI = `http://${SERVER_ADDR}`;
+
 let loadInterval
 
 function loader(element) {
