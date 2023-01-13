@@ -4,8 +4,6 @@ import user from './assets/user.svg'
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
 
-const {SERVER_ADDR} = process.env;
-
 let loadInterval
 
 function loader(element) {
@@ -88,7 +86,7 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    const response = await fetch(`http://${SERVER_ADDR}`, {
+    const response = await fetch('http://openai-client.openai-demo.svc.cluster.local', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
