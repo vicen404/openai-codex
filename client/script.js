@@ -6,8 +6,6 @@ const chatContainer = document.querySelector('#chat_container')
 
 const {SERVER_ADDR} = process.env;
 
-const SERVER_URI = `http://${SERVER_ADDR}`;
-
 let loadInterval
 
 function loader(element) {
@@ -90,7 +88,7 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    const response = await fetch('https://codex-im0y.onrender.com/', {
+    const response = await fetch(`http://${SERVER_ADDR}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
