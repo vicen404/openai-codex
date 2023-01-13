@@ -86,7 +86,7 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    const response = await fetch('http://openai-client.openai-demo.svc.cluster.local', {
+    const response = await fetch('http://openai-client.openai-codex-prod.svc.cluster.local', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
