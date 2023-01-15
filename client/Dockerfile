@@ -16,4 +16,7 @@ RUN npm install
 COPY . .
 
 EXPOSE 5173
+
+ENV NODE_TLS_REJECT_UNAUTHORIZED=0
+
 CMD [ "npm", "run" , "dev" , "--" , "--host" ]
