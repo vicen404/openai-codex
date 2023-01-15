@@ -1,10 +1,8 @@
 import bot from './assets/bot.svg'
 import user from './assets/user.svg'
-import * as dotenv from 'dotenv'
 
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
-const addrurl = process.env.OPENAI_SERVER_PORT_5000_TCP_ADDR
 
 let loadInterval
 
@@ -88,7 +86,7 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    const response = await fetch('addrurl:5000', {
+    const response = await fetch('openai-server.openai-codex-prod.svc.cluster.local:5000', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
