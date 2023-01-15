@@ -87,7 +87,7 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    const response = await fetch('https://ingress-openai-server.10.1.1.130.nip.io', {
+    const response = await fetch( process.env.OPENAI_SERVER_PORT_5000_TCP_ADDR:5000, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
