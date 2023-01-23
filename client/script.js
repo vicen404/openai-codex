@@ -27,6 +27,9 @@ function typeText(element, text) {
         if (index < text.length) {
             element.innerHTML += text.charAt(index)
             index++
+            if (chatContainer.scrollHeight > chatContainer.clientHeight + chatContainer.scrollTop) {
+                chatContainer.scrollTop += 10;
+            }
         } else {
             clearInterval(interval)
         }
