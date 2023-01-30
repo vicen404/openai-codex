@@ -92,7 +92,7 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    const response = await fetch(`https://${ip}:5000`, {
+    const response = await fetch(`https://openai-server-${ip}.traefik.me:5000`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
